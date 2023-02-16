@@ -1,3 +1,7 @@
+.secrets
+component.json
+deployment.json
+
 # Logs
 logs
 *.log

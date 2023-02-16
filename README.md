@@ -15,4 +15,7 @@
 https://docs.aws.amazon.com/ja_jp/greengrass/v2/developerguide/stream-export-configurations.html
 https://aws-greengrass.github.io/aws-greengrass-stream-manager-sdk-js/aws-greengrass-core-sdk.StreamManager.MessageStreamDefinition.html
 
-# やったこと
+# デプロイ
+```bash
+npx sls deploy --aws-profile ***
+---
