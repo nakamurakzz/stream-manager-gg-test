@@ -23,7 +23,7 @@ const serverlessConfiguration: AWS = {
   },
   // import the function via paths
   functions: {
-    subscribeElementData: {
+    index: {
       handler: "src/handler.index",
     },
   },
