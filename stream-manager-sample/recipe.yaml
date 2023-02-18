@@ -1,0 +1,21 @@
+---
+RecipeFormatVersion: '2020-01-25'
+ComponentName: com.example.StreamManagerS3JS
+ComponentVersion: 1.0.0
+ComponentDescription: Uses stream manager to upload a file to an S3 bucket.
+ComponentPublisher: Amazon
+ComponentDependencies:
+  aws.greengrass.StreamManager:
+    VersionRequirement: "^2.0.0"
+Manifests:
+  - Platform:
+      os: linux
+    Artifacts:
+      - URI: s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/stream-manager-sample.zip
+        Unarchive: ZIP
+      - URI: s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/stream-manager-sample/index.js
+    Lifecycle:
+      Install: npm install {artifacts:decompressedPath}/stream-manager-sdk/aws-greengrass-stream-manager-sdk
+      Run: |
+        export NODE_PATH=$NODE_PATH:{work:path}/node_modules
+        node {artifacts:decompressedPath}/stream-manager-sample/index.js
