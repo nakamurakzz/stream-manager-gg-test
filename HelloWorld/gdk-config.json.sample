@@ -1,12 +1,13 @@
 {
   "component": {
     "com.example.PythonHelloWorld": {
-      "author": "nakamura",
+      "author": "Author",
       "version": "NEXT_PATCH",
       "build": {
         "build_system": "zip"
       },
       "publish": {
+        "bucket": "",
         "region": "ap-northeast-1"
       }
     }
